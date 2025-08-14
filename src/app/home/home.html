@@ -1,0 +1,12 @@
+<div class="movies-grid">
+    @for (item of movies(); track $index) {
+        <div class="movie-item"> 
+            <img 
+                ngSrc="https://image.tmdb.org/t/p/w500/{{ item.poster_path }}" 
+                height="750" 
+                width="500"
+                [priority]="$index === 0"
+            />
+        </div>
+    }
+</div>
